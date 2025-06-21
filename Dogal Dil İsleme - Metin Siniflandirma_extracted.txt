@@ -1,0 +1,515 @@
+
+--- SAYFA 1 ---
+DOĞAL DİL
+İŞLEMEYE GİRİŞ
+BAHAR DÖNEMİ - 2023-2024
+BİLGİSAYAR MÜHENDİSLİĞİ BÖLÜMÜ
+BURSA TEKNİK ÜNİVERSİTESİ
+DR. ÖĞR. ÜYESİ HAYRİ VOLKAN AGUN
+==================================================
+
+--- SAYFA 2 ---
+Özet
+❑ Kelime Torbası Yaklaşımı - Bag of words ?
+❑ Sınıflandırma
+❑ Ağırlıklandırma
+❑ Kaynaklar
+==================================================
+
+--- SAYFA 3 ---
+Kelime Torbası
+Doküman / İçerik Kelime Çıkarımı Sözlük
+Edirne’de Meriç, Tunca ve Arda { edirne, meriç, tunca, arda, nehirleri,
+nehirleri etrafında 2315 parça bakımlı Edirne, Meriç, Tunca, Arda,
+etrafında, parça, bakımlı, sebze, meyve,
+sebze, meyve ve dut bahçeleri vardır. nehirleri, etrafında 2315, parça,
+dut, muşmula, meyveleri, lozan,
+Kayısı, erik, ayva, dut, muşmula ve bakımlı, sebze, meyve, ve, dut,
+diğer meyveleri boldur. bahçeleri, vardır, ., Kayısı, erik, yunanistan, savaş, tazminatı, kayısı,
+ayva, dut, muşmula, ve, diğer,
+erik, ayva, anltaşması, karaağaç, türkiye,
+meyveleri, boldur, .
+anısına, anıtı, anlaşma, ilçenin, inşa,
+}
+eylül
+Lozan Antlaşması ile Yunanistan'dan {
+savaş tazminatı olarak geri alınan Lozan, Antlaşması, ile Yunanistan,
+Karaağaç'ın 15 Eylül 1923'te dan, savaş, tazminatı, olarak, geri, ve, dan, ile, diğer, olarak,
+Türkiye'ye katılmasıyla ilin sınırı alınan, Karaağaç,ın, 15, Eylül,
+bugünkü halini aldı. Antlaşma anısına 1923, te, Türkiye, ye, ktılmasıyla,
+edilen, aldı, mahalesindedir, vardır,
+inşa edilen Lozan Anıtı ilçenin ilin, sınırı, bugünkü, halini, aldı, .,
+boldur, alınan,
+Karaağaç mahallesindedir. Antlaşma, anısına, inşa, edilen,
+Lozan, Anıtı, ileçenin, Karaağaç,
+mahallesindedir, .
+2315, 15, 1923
+}
+==================================================
+
+--- SAYFA 4 ---
+Kelime Torbası
+Doküman / İçerik Kelime Çıkarımı Sözlük
+Edirne’de Meriç, Tunca ve Arda { edirne, meriç, tunca, arda, nehirleri,
+nehirleri etrafında 2315 parça bakımlı Edirne, Meriç, Tunca, Arda,
+etrafında, parça, bakımlı, sebze, meyve,
+sebze, meyve ve dut bahçeleri vardır. nehirleri, etrafında 2315, parça,
+dut, muşmula, meyveleri, lozan,
+Kayısı, erik, ayva, dut, muşmula ve bakımlı, sebze, meyve, ve, dut,
+diğer meyveleri boldur. bahçeleri, vardır, ., Kayısı, erik, yunanistan, savaş, tazminatı, kayısı,
+ayva, dut, muşmula, ve, diğer,
+erik, ayva, antlaşması, karaağaç,
+meyveleri, boldur, .
+türkiye, anısına, anıtı, antlaşma, ilçenin,
+}
+inşa, eylül
+Lozan Antlaşması ile Yunanistan'dan {
+savaş tazminatı olarak geri alınan Lozan, Antlaşması, ile Yunanistan,
+Karaağaç'ın 15 Eylül 1923'te dan, savaş, tazminatı, olarak, geri, ve, dan, ile, diğer, olarak,
+Türkiye'ye katılmasıyla ilin sınırı alınan, Karaağaç,ın, 15, Eylül,
+bugünkü halini aldı. Antlaşma anısına 1923, te, Türkiye, ye, ktılmasıyla,
+edilen, aldı, mahalesindedir, vardır,
+inşa edilen Lozan Anıtı ilçenin ilin, sınırı, bugünkü, halini, aldı, .,
+boldur, alınan, katılmasıyla
+Karaağaç mahallesindedir. Antlaşma, anısına, inşa, edilen,
+Lozan, Anıtı, ileçenin, Karaağaç,
+mahallesindedir, .
+2315, 15, 1923
+}
+==================================================
+
+--- SAYFA 5 ---
+Kelime Torbası
+Doküman / İçerik Kelime Çıkarımı Sözlük
+Edirne’de Meriç, Tunca ve Arda { edirne, meriç, tunca, arda, nehir, etraf,
+nehirleri etrafında 2315 parça bakımlı Edirne, Meriç, Tunca, Arda,
+parça, bakım, sebze, meyve, dut, kayısı,
+sebze, meyve ve dut bahçeleri vardır. nehirleri, etrafında 2315, parça,
+erik, ayva, muşmula, meyve, yunanistan,
+Kayısı, erik, ayva, dut, muşmula ve bakımlı, sebze, meyve, ve, dut,
+diğer meyveleri boldur. bahçeleri, vardır, ., kayısı, erik, savaş tazminatı, lozan antlaşması,
+ayva, dut, muşmula, ve, diğer,
+karaağaç, türkiye, lozan anıtı, ilçe, inşa
+meyveleri, boldur, .
+}
+ve, dan, ile, diğer, ol,
+Lozan Antlaşması ile Yunanistan'dan {
+savaş tazminatı olarak geri alınan Lozan, Antlaşması, ile Yunanistan,
+Karaağaç'ın 15 Eylül 1923'te dan, savaş, tazminatı, olarak, geri, edilen, aldı, mahale, var, bol, al, katıl
+Türkiye'ye katılmasıyla ilin sınırı alınan, Karaağaç, ın, 15, Eylül,
+bugünkü halini aldı. Antlaşma anısına 1923, te, Türkiye, ye, katılmasıyla,
+15 Eylül 1923
+inşa edilen Lozan Anıtı ilçenin ilin, sınırı, bugünkü, halini, aldı, .,
+2315
+Karaağaç mahallesindedir. Antlaşma, anısına, inşa, edilen,
+Lozan, Anıtı, ileçenin, Karaağaç,
+mahallesindedir, .
+}
+==================================================
+
+--- SAYFA 6 ---
+Kelime Torbası/Çantası
+❑ Her bir doküman için:
+❑ Kelime sınırlarının bulunması ile kelimeler çıkarılır.
+❑ Kelimeler sıralı bir şekilde bir dizide toplanır. Buna kelime dizisi denir.
+❑ Kelime dizindeki kelimelerde bulunan ekler kaldırılır ve kelimeler birlikte geçme sıklıklarına göre
+gruplandırılır.
+❑ Kelime dizisinde bulunan tüm kelimeler sözlüğe eklenir.
+❑ Doküman torbası her bir kelimenin tek bir kez geçtiği bir küme şeklinde ifade edilir.
+❑ Her bir doküman sözlükte geçen kelimeleri barındırıp barındırmadığına göre bir vektör ile ifade edilir.
+❑ Bu vektörde doküamnda geçen kelimeler
+▪ Geçip geçmeme durumuna göre 1 yada 0 ile
+▪ Geçme sayısına göre rakamla.
+▪ Geçme ağırlığına göre kayar nokta sayı ile (tf*idf)
+==================================================
+
+--- SAYFA 7 ---
+Doküman Vektörü
+❑ Sözlükteki kelimelerin her bir kök olarak dokümanda kaç kere geçiyor.
+Doküman / İçerik Sözlük Doküman Vektörü
+Edirne’de Meriç, Tunca ve Arda edirne, meriç, tunca, arda, nehir, etraf, Geçip/geçmeme durumu:
+nehirleri etrafında 2315 parça bakımlı parça, bakım, sebze, meyve, dut,
+sebze, meyve ve dut bahçeleri vardır. muşmula,kayısı, erik, ayva, yunanistan,
+[1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 0, 0,
+Kayısı, erik, ayva, dut, muşmula ve savaş tazminatı, lozan antlaşması,
+0, 0, 0, …, 1, 0, 0, 0, 1]
+diğer meyveleri boldur. karaağaç, türkiye, lozan anıtı, ilçe,
+inşa, ve, dan, ile, diğer, ol,
+Geçme sayısı:
+edilen, aldı, mahale, var, bol, al, katıl,
+15 Eylül 1923, 2315
+[1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 2, 0, 0,
+0, 0, 2, …, 1, 0, 0, 0, 1]
+ve, meyve 2 kez geçiyor.
+==================================================
+
+--- SAYFA 8 ---
+Doküman Vektörü
+❑ Bazı dokümanlar çok kısa ve bazı dokümanlar çok uzun olabilir.
+❑ Dokümanların çok uzun olması içerisinde çok fazla kelime barındırması neyi etkiler? Neden önemlidir?
+❑ Bir dokümanın uzunluğu içerisinde barındırdığı toplam sözcük sayısı ve farklı sözcük sayısı ile ifade edilir.
+❑ Doküman vektörü bulunduktan sonra doküman uzunluğunun hesaplanmasında norm kullanılır.
+❑ 𝑥 ∗ 𝑥 + 𝑥 ∗ 𝑥 + ⋯+ 𝑥
+1 1 2 2 𝑛
+Doküman / İçerik Doküman Vektörü
+Edirne’de Meriç, Tunca ve Arda nehirleri etrafında 2315 parça bakımlı sebze,
+meyve ve dut bahçeleri vardır. Kayısı, erik, ayva, dut, muşmula ve diğer meyveleri [1, 1, 1, 1, 5, 1, 1, 1, 1, 1, 1, 0, 0,
+boldur. Arda veya Arda Nehri güney Bulgaristan'da Rodop dağlarından doğar ve
+0, 2, 2,1, 1 …, 1, 0, 3, 5, 1]
+Yunanistan - Türkiye sınırında, Yunanistan topraklarında Meriç nehrine karışır.
+Bugün Kırcaali'den geçen Arda nehri üzerindeki en büyük köprü eğlence
+Doküman uzunluğu (norm):
+merkezine dönüştü. Arda nehri nereden doğar nereye dökülür? Tunca hangi
+akarsuyun kolu? Aras nehri nereden geçiyor? Meriç ve Tunca Nehri nerede? 𝑥 = 14 + 58 + 9 = 9
+2
+==================================================
+
+--- SAYFA 9 ---
+Sınıflandırma
+❑ Dokümanlar birçok farklı şekilde sınıflandırılabilir, örneğin:
+konulara göre
+- duygu duruma göre
+- gereksiz yada gerekli olma durumuna göre
+- içerisindeki dile göre türkçe, japonca gibi
+- nefret söylemi barındırıp barındırmamasına göre
+- gerçek bir sosyal medya kullanıcısı olup olmama durumuna göre
+==================================================
+
+--- SAYFA 10 ---
+Sınıflandırma
+❑ Yapılan sınıflandırmada bir doküman birden fazla farklı sınıfa ait olabilir.
+Buna çok etiketli çoklu sınıflı sınıflandırma denir.
+❑ Eğer bir doküman sadece birden fazla sınıf içerisinden sadece bir tanesine
+ait ise o zaman buna çok sınıflı sınıflandırma denir.
+❑ Eğer bir doküman 2 sınıftan sadece birine ait ise o zaman buna ikili
+sınıflandırma denir.
+==================================================
+
+--- SAYFA 11 ---
+K - en yakın sınıflandırma
+❑ Bir dokümanın kendisine ait en yakın dokümana atanarak sınıflandırılmasına k-nn
+sınıflandırma denir.
+❑ K değeri dokümana en yakın olan k adet komşuyu temsil eder. Bu komşular içerisinde
+dokümana en yakın olan sınıf yoğunluğu ile dokümanın sınıfı bulunabilir.
+❑ Bazı durumlarda k-nn sınıflandırmada sınıfı temsil eden tüm dokümanların ortalaması
+kullanılır. Buna en yakın merkez yaklaşımı denir. Bir sınıfın merkez vektörüne en yakın olan
+doküman o sınıfa aittir.
+==================================================
+
+--- SAYFA 12 ---
+Yakınlık hesabı
+İki dokümanın birbirine olan uzaklığı vektörler üzerinden hesaplanır. Temelde iki
+farklı yakınlık hesabı vardır.
+❑ Orantısal yakınlık hesabı: Dokümanın büyüklüğü göz önünde bulundurulmadan içerisinde
+geçen kelimelerin ve bu kelimelerin geçme sayılarının orantısal olarak biririne benzer olup
+olmadığını kıyaslar.
+❑ Mesafe hesabı: Euclid yada benzeri bir uzaklık hesabı kullanarak mesafesel uzaklığını
+hesaplar.
+==================================================
+
+--- SAYFA 13 ---
+Minkowski Uzaklığı
+❑ Genel olarak Euclid uzaklığı ve Manhattan uzaklığının bir türevidir.
+❑ X ve Y dokümanları için verilen X ve Y vektörleri yukarıdaki formülasyonda p değeri 1 için
+Manhattan ve p değeri 2 için Euclid uzaklığını göstermektedir. Tüm p değerleri için Minkowski
+uzaklığı aşağıdaki geometrik şekil çevresi üzerindeki tüm farklı değerleri alabilir.
+X=1 ve
+Y=1
+X = 1 ve
+Y = 0
+==================================================
+
+--- SAYFA 14 ---
+Manhattan Uzaklığı
+❑ New York’daki Manhattan bölgesinde bulunan iki nokta üzerinde yollar üzerinden taksi ile gidilerek ölçülen
+mesafedir. Bu bir düzlem üzerinde aşağıdaki şekilde ifade edilebilir.
+i=2 için
+pi=2 ve q1=3
+Q noktası
+P noktası
+1 2 3 4 5 6 7
+==================================================
+
+--- SAYFA 15 ---
+Euclid Uzaklığı
+❑ Pisagor teoreminde hesaplanan hiptenüs mesafesidir. Ancak bu hesaplama
+çok boyutlu vektörler için aşağıdaki gibidir.
+==================================================
+
+--- SAYFA 16 ---
+Mahalanobis uzaklığı
+❑ Mahalanobis mesafesi bir doküman vektörü ile bir sınıfa ait merkez vektörü arasında
+aşağıdaki gibi hesaplanır.
+❑ S vektörlerin her biri için kovaryans hesabını ifade eder.
+❑ Kovaryans nedir? Nasıl hesaplanır? Neyi ifade eder?
+==================================================
+
+--- SAYFA 17 ---
+Mahalanobis uzaklığı
+x1 ve x2 değerleri
+için kovaryans
+Merkez vektörü
+==================================================
+
+--- SAYFA 18 ---
+Jaccard index
+❑ Jaccard index ile iki vektörün sahip olduğu ortak eleman sayısı hesaplanır.
+❑ Örneğin: X=[1, 0, 1, 1, 0] ile Y=[1, 0, 1, 0, 1] vektörlerinde ortak eleman indisleri: 1. ve 3.
+indislerdir. Bu durumda = 2 ve = 4 olacaktır.
+==================================================
+
+--- SAYFA 19 ---
+Cosinüs uzaklığı
+❑ A ve B vektörleri için cosinüs benzerliği yanda verilmiştir.
+❑ Cosinüs ile orantısal uzaklık ölçülür. Örneğin türkiye, anıtkabir,
+elma dağ kelimelerinin geçtiği iki doküman vektörü aşağıda
+verilmiştir.
+❑ X= [1, 1, 1 ] ve Y = [1, 5, 5] ve Z = [3, 15, 15] dokümanları
+arasındaki
+❑ cosinüs benzerliği X ve Y için 0.88 ve Y ve Z için 1.0 çıkmaktadır.
+❑ euclid uzaklığı X ve Y için 32, ~5.65 ve Y ve Z için 14.28
+❑ Bu cosinüs farkını uzaklığa dönüştürmek için (1 – cos) = 0.22 ve
+0.0 değerleri elde edilir.
+❑ Bu durumda cosinüs içim Y ve Z bir birine çok yakın (0.0) iken
+euclid için uzaklık X ve Y nin kinden (14.28) çok daha fazladır.
+==================================================
+
+--- SAYFA 20 ---
+K-nn sınıflandırıcı
+❑ Cosinus yakınlık hesabı kullanarak aşağıdaki T vektörünü doğru sınıfa atayınız.
+❑ Her bir vektörün sınıfı: [X,Spor], [Y, Politika], [Z, Güncel], [A,Spor], [B, Politika], [C,
+Güncel]
+❑ cosinus(T,X) = 0.5, cosinus(T, Y) = 0.6, cosinus(T, Z)=0.3, cosinus(T, A) = 0.6, cosinus(T,
+B) = 0.4, cosinus(T, C) = 0.4
+❑ K=1 için T hangi sınıftadır, K=4 için T hangi sınıftadır.
+❑ Merkez yakınlık hesabı kullanılmış olsaydı ne olurdu?
+==================================================
+
+--- SAYFA 21 ---
+Naive Bayes sınıflandırıcı
+❑ Naïve Bayes en sık kullanılan sınıflandırıcıdır. Bu sınıflandırıcıda her bir kelimenin belirli bir sınıfa ait
+olasılığı kullanarak her bir sınıfı ait olsalık modellerini özellik dağılımından üretir. Dolayıyla naive
+Bayes üretici sınıflandırıcı türünde bir makine öğrenmesi yöntemidir.
+❑ Eğer dokümandaki tüm kelimelerin bir sınıfa ait olma olasılıkları çarpımı yüksek ise o zaman bu
+doküman o sınıfa aittir denir.
+❑ Bu presnibe maksimum sonsal olasılık (maximum aposterior probability) – MAP denir. Buna göre
+tüm sınıfa ait olma olasılığı en yüksek olan sınıf doğru sınıf olarak kabul edilir.
+𝑝 𝑥 𝑐
+𝑖
+𝑝 𝑐 𝑥 = 𝑃 𝑐 ∗ ෑ
+𝑝 𝑥
+𝑖
+𝑖=1
+𝑓𝑟𝑒𝑞 /𝑡𝑜𝑡𝑎𝑙 ∗ ෑ 𝑓𝑟𝑒𝑞(𝑥 , 𝑐)/𝑓𝑟𝑒𝑞(𝑥 )
+𝑐 𝑖 𝑖
+𝑖=1
+==================================================
+
+--- SAYFA 22 ---
+Naïve Bayes sınıflandırıcı
+class SAVAŞ ZAFER GEL KAR ZAM DOLAR ORAN DAĞ SU ÇAM TOPLAM
+D1 A 1 1 1 0 0 0 0 0 1 0 5
+D2 B 0 1 0 1 1 1 1 0 0 0 4
+D3 C 0 0 0 0 0 0 1 1 1 1 2
+D4 B 0 0 0 1 0 1 1 0 1 0 4
+D5 B 0 1 0 0 1 0 1 0 0 0 4
+D6 A 0 0 1 0 0 0 1 1 1 0 5
+D7 A 1 0 1 0 0 0 0 0 1 0 5
+D8 A 0 0 0 0 0 0 0 0 0 0 5
+D9 A 1 0 1 0 0 0 0 1 0 0 5
+D10 B 0 1 1 1 1 1 1 0 1 0 4
+D11 C 0 0 0 0 0 1 1 1 1 1 2
+Toplam 3 4 5 3 3 4 7 4 7 2
+==================================================
+
+--- SAYFA 23 ---
+Naive Bayes sınıflandırıcı
+Naive bayes ile;
+❑ 𝑝(𝑆𝐴𝑉𝐴Ş | 𝐴) = #(𝑆𝐴𝑉𝐴Ş && 𝐴) / #(𝐴) = 3.0 / 5.0
+❑ 𝑝(𝐴) = #𝐴/𝑇𝑜𝑡𝑎𝑙 = 5.0 / 11.0
+❑ 𝑝(𝑆𝐴𝑉𝐴Ş) = #(𝑆𝐴𝑉𝐴Ş)/𝑇𝑜𝑡𝑎𝑙 = 3.0 / 11
+❑ 𝑝( 𝐴 | 𝑆𝐴𝑉𝐴Ş) = 𝑃(𝐴) ∗ 𝑃(𝑆𝐴𝑉𝐴Ş | 𝐴) / 𝑃(𝑆𝐴𝑉𝐴Ş) = 5.0/11.0 ∗ 3.0/5.0 ∗ 11.0/3.0
+p( A | D) = Doküman içerisindeki tüm kelimelerin A kategorisine ait olma olasılıkları çarpımı
+= P(A|SAVAŞ) * P(A| ZAFER) * P(A| GEL) ... P(A| ÇAM)
+Peki bazı kelimeler D dokümanı içinde geçiyor fakat A kategorisinde hiç geçmiyorsa?
+==================================================
+
+--- SAYFA 24 ---
+Naive Bayes sınıflandırıcı
+❑ Bu durumda Naive Bayes sınıflandırıcı yumuşatma yada düzleme yöntemi (smoothing) kullanılır.
+❑ Yumuşatma ile 0 yada sonsuz olan olasılık değerleri küçük sayılara yuvarlanır.
+❑ Örneğin: #(SAVAŞ && B) +1.0 / #(B)+1.0
+❑ Peki olasılık çarpımlarındaki en önemli problem nedir?
+❑ Olasılık 1.0 değerinden küçük olduğu için çarpım uzunluğu artıkça değer küçülür ve bunu
+engelemek için negative logaritma kullanılır ve çarpım toplama dönüşür.
+❑ -log(a * b * ...) = - log(a) – log(b) ...
+==================================================
+
+--- SAYFA 25 ---
+Kelime Çantası
+❑Tüm gördüğümüz ağırlıklandırma, sınıflandırma ve uzaklık yöntemlerinde kelimeler arasındaki
+ilişki kullanılmadı.
+❑Bu yöntemlere genel olarak özellikler (kelime/terimler) bağımsız özdeş dağılıma sahiptir. Kısaca
+kelime sınıf ve doküman dağılımları birbirinden bağımsızdır veya birbirini etkilemez.
+❑Bağımsız olma durumunda : örneğin; kale kelimesi ve futbol kelimesin savaş kategorisinde olan
+dokümanlarda geçme durumları birbirinden bağımsız ise o zaman geçme olasılıkları için aşağıdaki
+durum oluşur.
+𝑃 𝑓𝑢𝑡𝑏𝑜𝑙 ∩ 𝑘𝑎𝑙𝑒|𝑐 = 𝑠𝑎𝑣𝑎ş = 𝑃 𝑓𝑢𝑡𝑏𝑜𝑙|𝑐 = 𝑠𝑎𝑣𝑎ş ∗ 𝑝(𝑘𝑎𝑙𝑒|𝑐 = 𝑠𝑎𝑣𝑎ş)
+❑İki olayın birbirinden bağımsız değilse bu durumda bağımlı durum oluşur. Örneğin yukarıdaki örnek
+için kategori spor olsun. Bu durumda futbol ve kale kelimelerinin kategori içerisinde birlikte geçme
+olasılıkları aşağıdaki gibi hesaplanabilir.
+𝑃 𝑓𝑢𝑡𝑏𝑜𝑙 ∩ 𝑘𝑎𝑙𝑒|𝑐 = 𝑠𝑝𝑜𝑟 = 𝑃 𝑓𝑢𝑡𝑏𝑜𝑙|𝑐 = 𝑠𝑝𝑜𝑟, 𝑤 = 𝑘𝑎𝑙𝑒 ∗ 𝑝(𝑘𝑎𝑙𝑒|𝑐 = 𝑠𝑝𝑜𝑟)
+==================================================
+
+--- SAYFA 26 ---
+Ağırlıklandırma
+❑ Terimlerin doküman içerisindeki geçme sıklığı terim ve doküman arasındaki ilişkiyi belirler.
+❑ Bazen terimlerin dokümaları temsil etmesi mümkün olmaz. Örneğin fonksiyon kelimeleri (stop words)
+olan ve, veya, nasıl gibi sık geçen kelimeler dokümanları temsil etmeyebilir. Bu durumda terimin
+doküman içerisindeki ağırlığının bulunması sınıflandırma sonucunda çok etkilidir.
+❑ Standard yöntemde kelimeler geçip geçmeme ile ifade edilir.
+❑ İkili ağırlık (var/yok) = [0, 1, 1, 1, 0, 0, 0,..., 1]
+❑ Frekans ağırlık (kaç defa) = [0, 2, 1, 1, 0, 0, 0, ..., 7]
+❑ Frekans oran (norm) = frekans/doküman uzunluğu = [0, 2.0/11,1.0/11, 1.0/11.0,...,7.0/11.0]
+❑ Frekans log = log(frekans+1.0)
+❑ Ters doküman frekansı (IDF): (toplam doküman sayısı / terimin kaç dokümanda geçtiği) = N / df
+❑ TF*IDF = Frekans ağırlık * ters doküman frekansı
+==================================================
+
+--- SAYFA 27 ---
+Örnek
+class KAVŞAK DENİZ DAĞ
+❑ Ters doküman ağırlığı (IDF)
+D1 A 1 3 5
+kullanarak aşağıdaki dokümanları
+D2 B 0 2 0
+içerisinde geçen DAĞ terimini her bir
+D3 C 3 0 4
+doküman için ağırlıklandırınız.
+D4 B 0 0 0
+D5 B 0 1 0
+❑ Dokümanlarda sadece 3 terim
+D6 A 1 0 4
+olduğunu kabul ediniz.
+Toplam 3 4 5
+==================================================
+
+--- SAYFA 28 ---
+Tek değişkenli normal dağılım
+Normal dağılım çoğu zaman karşımıza çıkan
+bir dağılım fonksiyonudur.
+Genelde çan eğrisi dağılımı olarak da
+bilinmektedir.
+Her bir kelime ağırlıklandırıldıktan sonra üç
+farklı kategori için yandaki gibi üç farklı normal
+dağılım ile modellenebilir.
+Burada x kelimesinin geçme ortalaması yeşil
+kategori ile belirtilen durum için 3 tür. Buna
+göre yeşil kategoriden bir doküman seçtiğimde
+kelime ağırlığı en yüksek ihtiamalle üç
+olacaktır.
+==================================================
+
+--- SAYFA 29 ---
+Tek değişkenli normal dağılım
+Yandaki formül belirli bir noktada normal dağılım üzerinde x
+girdisi için dağılımın olasılık değerini vermektedir. Burada μ
+ortlama, σ standard sapma ve 𝜋 (pi) 3.14 sabit olarak alınmalıdır.
+Örneğin spor dokümanları için futbol kelimesi aşağıdaki gibi tf x
+idf değerler alsın;
+Doküman 1: 5.0
+Doküman 2: 3.75
+Doküman 5: 1.25
+Doküman 8: 2.0
+Bu durumda spor dokümanları için ortalama 3.0 olacaktır. Bu
+durumda yandaki formülde ortalama μ = 3 tür.
+Ve standard sapmada yandaki formüle göre ve x dokümanda
+i
+geçme miktarını belirtirse;
+((5 – 3)2 + (3.75 – 3)2 + (1.25 – 3)2 + (2 – 3)2 )/4
+==================================================
+
+--- SAYFA 30 ---
+Tek değişkenli normal dağılım
+Bu durumda yandaki formülü
+kullanarak spor kategorisi için olasılığı
+hesaplayalım.
+Eğer ortalama μ=3 ve standard sapma
+σ=2 ise dokümandaki futbol kelimesine
+ait tf x idf 3 ise o zaman bu değer
+Adım 1: ((3 – 3)/2)2 = 0
+Adım 2: e-1/2 x 0= e0 = 1
+Adım 3: f(x) = 1 / 5.011 = 0.19
+==================================================
+
+--- SAYFA 31 ---
+Çok değişkenli normal dağılım
+Çoğu zaman kelimeler arasında belirli bir
+bağımlılık vardır ve bir kelimelenin geçmesi
+diğer bir kelimenin geçme olasılığını yada
+kaç kere geçeceğini etkiler.
+Böyle bir durumda çok değişkenli bir
+olasılık dağılım fonksiyonu olan çok
+değişkenli normal dağılım (multivariate
+gaussian) fonskiyonunu kullanmamız daha
+doğru sonuçlar üretecektir.
+==================================================
+
+--- SAYFA 32 ---
+Çok değişkenli normal dağılım
+Çok değişkenli normal dağılımda kovaryans
+matrisi hesabı yapmamız gerekir.
+Kovaryans matrisi değişkenlerin yada kelimelerin
+diğer geliemelerle geçme frekanslarının
+ortalamadan ne kadar saptığını belirten bir
+matristir.
+Kovaryans matrisi her değişken için diğer
+değişkenlerle arasında hesaplanır.
+Kovaryans hesabında x doküman vektörünü ve
+i
+ത
+𝑋 ise belirli bir kategoriye ait olan dokümanların
+vektör ortalamasını göstermektedir. Bu kategoride
+toplam N adet doküman yer almaktadır.
+==================================================
+
+--- SAYFA 33 ---
+Örnek Kovaryans hesabı
+• Birinci kelimenin geçme frekansları
+• Sözlüğümüzün 3 adet kelime içerdiğini
+ortalaması (2+3+4)/3 = 3 olacaktır. Benzer
+düşünelim.
+şekilde diğer kelimelerde aşağıdaki gibi
+• Bu durumda üç doüman için aşağıdaki gibi 3 hesaplanabilir.
+vektör verebiliriz.
+• Burada 1. indeks 1. kelmeyi ifade etmektedir.
+==================================================
+
+--- SAYFA 34 ---
+Örnek Kovaryans hesabı
+• Ortalamalar bulunduktan sonra kovaryans
+• Sözlüğümüzün 3 adet kelime içerdiğini
+matrisinde 3 kelime için birbiri arasında
+düşünelim. ortalamadan nasıl değiştiğini hesaplarız.
+• Tüm dokümanlar için 1. kelimenin 2. kelime ile
+• Bu durumda üç doüman için aşağıdaki gibi 3
+birlikte değişimi aşağıdaki gibi toplamın
+vektör verebiliriz.
+ortalaması şeklinde hesaplanır.
+• Burada 1. indeks 1. kelmeyi ifade
+etmektedir.
+==================================================
+
+--- SAYFA 35 ---
+Örnek videolar:
+❑ Naive bayes - Youtube video
+❑ Terim TF*IDF - Youtube Videos
+❑ Örnek sınıflandırma
+==================================================
+
+--- SAYFA 36 ---
+Referanslar
+https://nlp.stanford.edu/fsnlp/
+https://happyharrycn.github.io/CS540-
+Fall20/lectures/statistics_nlp.pdf
+==================================================

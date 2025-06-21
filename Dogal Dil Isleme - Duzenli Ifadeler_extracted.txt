@@ -1,0 +1,245 @@
+
+--- SAYFA 1 ---
+Doğal Dil İşlemeye Giriş
+Dr. Öğr. Üyesi Hayri Volkan Agun
+Bilgisayar Mühendisliği
+==================================================
+
+--- SAYFA 2 ---
+İçerik
+❑ Düzenli ifadeler
+❑ Düzenli ifadelerde
+❑ Düzenli ifade örnekleri
+❑ Chomsky hiyerarşisi
+==================================================
+
+--- SAYFA 3 ---
+Düzenli İfadeler
+❑ Cümleler, kelimeler, kelimelere eklenen ekler ardışık olarak belirli karakter
+dizgelerinden oluşurlar.
+❑ Bu karakterler içerisinde geçen ardışık anlamlı öbeklerden oluşur.
+❑ Örneğin:
+❑ ‘Takım kaptanı Gökhan 15 Haziran 2013 saat 08:05 de otobüse bindi.’ cümlesinde geçen
+farklı öbekler:
+❑ 08:05 aslında bir öbektir. Benzer saat öbekleri 12:25, 24:00
+❑ 15 Haziran 2013 aslında bir öbektir. Benzer tarih öbekleri 12 Temmuz 2020, 23 Nisan
+1919, 16 Mayıs 1233, …
+❑ Takım kaptanı aslında bir öbektir. Benzer isim öbekleri Gemi kaptanı, Uzakyol kaptanı,
+Yat kaptanı, Seyrüsefer Kaptanı.
+❑ Gökhan aslında bir öbektir. Benzer isim öbekleri Hunhan, Barkhan, Tunhan, …
+==================================================
+
+--- SAYFA 4 ---
+Düzenli İfadeler
+❑ Düzenli ifadeleri kullanarak benzer olan öbekleri metin içerisinde arayabiliriz.
+❑ Metin içerisinde arama için en basit yöntem karakterlere bakarak yapılan
+aramadır.
+❑ Belirli bir karakterden başlayarak metin içerisinde aranan öbeğin geçip
+geçmediğine bakılır.
+❑ Ancak bu yöntem her bir karakter ile aranan öbekteki her bir karakterin
+kıyaslamasını içerdiğinden dolayı O(n * m) zaman karmaşıklığına sahiptir.
+❑ O(n * m) zaman karmaşıklığında n metin uzunluğu ve m ise aranan öbek
+uzunluğudur.
+==================================================
+
+--- SAYFA 5 ---
+Düzenli İfadeler
+❑ Düzenli ifadeler aslında deterministik sonlu durum otomatlarıdır
+(makineleridir).
+❑ Sonraki sunumda gösterilen ifadede sonlu durum otomatları ile bir veri yapısı
+gösterilmektedir.
+❑ Bu veri yapısında kullanılan düğümlerden çift çizgili olanlar son durumu
+göstermektedir.
+==================================================
+
+--- SAYFA 6 ---
+Düzenli İfadeler
+❑ Regex: (a+)(d(a+)c|bd)
+❑ Yukarıdaki düzenli ifade ile ifade edilen S1, S2, S3, ve S4 düğümleri ile ilgili olarak düğümler
+arasında geçiş için kullanılan a, b, c, ve d karakterlerini kullanarak tüm düzenli ifadenin
+tüketilmesi gerekir.
+❑ Örneğin: aaaadaac, adac, adaabd, ve adbd ifadeleri yukarıdaki düzenli ifade tarafından
+üretilebilir yada tüketilebilir.
+==================================================
+
+--- SAYFA 7 ---
+Düzenli İfadeler
+❑ [A-Z] : A ve Z arasındaki bütün büyük harfleri yakalamak için kullanılır. Bu harfler
+sadece İngilizce alfabeden gelmektedir.
+❑ [A-ZÜŞİÇÖĞ] : A ve Z arasındaki İngilizce alfabeye ek olarak Türkçe karakterleri
+yakalamak için kullanılır.
+❑ [1-9] : 1 ve 9 dahil tüm sayıları temsil eder.
+❑ [1-9]+ : 1 ve 9 dahil tüm sayıların bir veya daha çok geçtiği durumlar örneğin: 2,
+123, 111, 122339 gibi sayı dizilerinin yakalanması için kullanılır.
+❑ \p{Lu}{2, 5} : 2 veya en fazla 5 karakterden oluşan büyük harflerin yakalnmasında
+kullanılır. Örneğin: ASV, AB, ABDFR gibi harf dizilerini yakalar.
+❑ [^A-Z] : A ve Z karakterleri dışındaki harfler.
+❑ [.] : Herhangi bir sembol, karakter, yada sayı: &, A, 5, …
+==================================================
+
+--- SAYFA 8 ---
+Düzenli İfade örnekleri
+İfade Örnek
+woodchucks? woodchuck
+colou?r color or colour
+^ Satır başı
+\ $ Satır sonu
+\b Kelime sınırı
+\B Kelime sınırı olmayan
+\d [0-9] : Rakam
+\D [^0-9] : Rakam olmayan
+\w [a-zA-Z0-9] : Harf yada rakam
+\W [^\w] : Harf yada rakam olmayan
+\s [ \r\t\n\f] : Boşluk
+\S [^\s] : Boşluk olmayan
+==================================================
+
+--- SAYFA 9 ---
+Düzenli İfadeler Örnek
+• Yandaki doküman örneğinde bir
+kütüphaneye ait kitap borkodu
+verilmektedir. Bu kitap barkodunun
+içerisinde ayrıca kitabın basım yılı yer
+[1-9]+
+almaktadır. Buna göre kitabın basım
+yılını bulan düzenli ifade nedir?
+\d{4}
+==================================================
+
+--- SAYFA 10 ---
+Düzenli İfade - Java Örneği
+package test;
+public class RegexTestStrings {
+public static final String EXAMPLE_TEST = "Bu kitabın basım yılı 1998 ve bu da barkod numarası 1999-
+20Z1.12 "
+public static void main(String[] args) {
+System.out.println(EXAMPLE_TEST.matches("\\d{4}"));
+String[] splitString = (EXAMPLE_TEST.split("\\s+"));
+System.out.println(splitString.length);
+for (String string : splitString) {
+System.out.println(string);
+}
+}
+}
+==================================================
+
+--- SAYFA 11 ---
+Düzenli İfadeler - Problemleri
+Büyük (.*) heykel
+• Aşağıdaki metin örnekleri içinde «büyük
+heykel» geçen örnekleri çıkaran düzenli
+ifadeyi yazınız. büyük (.*) heykel
+• Büyük yeşil boğa heykeli uzaktan çok
+minik göründü.
+???
+• büyük ve küçük heykeller sergilendi.
+• Büyük güzel ağaç heykeli kapatıyor.
+==================================================
+
+--- SAYFA 12 ---
+Öbek karmaşıklıkları
+• Bir dili başka bir dile çeviren diller bağımsız ya da yinelemeli sıralı (recursively enumarable)
+dillerdir.
+• Karmaşıklık yukarıdaki örnek düşünüldüğünde anlaşılması zor bir hal almaktadır.
+• Bir dilin parçalarından oluşturularak dilde geçen tüm ifadeleri üretebilen kuralların tümüne
+gramer denir.
+• Düzenli ifadeler en basit ifade ile düzenli gramerler olarak adlandırılabilir.
+==================================================
+
+--- SAYFA 13 ---
+Düzenli ifade çeşitleri
+• İki sevyeli morfolojik analiz : Sonlu durum çeviricileri
+• Düzenli ifadeler belirli bir öbeği yakalarken sonlu durum otomatlarını kullanırlar.
+• Ancak dildeki tüm yapılar sonlu durum otomatları ile modellenemez. Örneğin
+• Satılacaklar : kitap +laş +tır +ıl +an +lar
+• Yukarıdaki kelimenin eklerinin bulunması için ekler arasındaki bağıntılar dikkate alınır. Örneğin
++laş isimden fiil türeten ekten sonra +lar çoğul eki gelmez.
+• Bazı durumlarda örneğin pçtk sessiz benzeşmesi (kitapım => kitabım), yada hece düşmesi (alın
+=> alnımda) durumlarında eklerin ayrıştırılması için sonlu durum çeviriciler kullanılır.
+==================================================
+
+--- SAYFA 14 ---
+Düzenli ifade çeşitleri
+Yandaki düzenli ifade epsilon (ε) karakteri boş karakteri
+ifade eder.
+A: ε şeklinde yazıldığında tüketim için A karakteri ve
+üretim için boş karakter kullanılır.
+Buna göre kitabın kelimesini kitap ve ın şeklinde kitap+ın
+şeklinde yazmak için ne kullanılır.
+Boş karakter tüketim için kullanıldığında sonlu durumlar
+deterministik olmayabilir.
+Deterministik olma durumunda birden çok dallanma
+ortaya çıkacaktır.
+==================================================
+
+--- SAYFA 15 ---
+Düzenli çeviriciler
+Ekler:
+kitaplar => kitap + lar
+Sonlu durum otomatları bir metin içerisinde geçen
+kitabı => kitap + ı
+düzenli öbekleri yakalamak için kullanılırlar.
+alnından => alın + ın + dan
+Sonlu durum otomatları ile metin içerisinde geçen
+Yukarıdaki ek çözümlemelerinde bir otomat için bitiş
+örneğin tarih, saat, isimler, ekler yakalanabilir.
+durumları ek sonlarını ifade etmektedir.
+Sonlu durum otomatları yakalanan ifade üzerinde bir
+Yukarıdaki otomatın b=>p ve ε => ı dönüşümlerini
+değişiklik yapmazlar.
+yapabilmesi için sonlu durum otomatının, sonlu
+Türkçe gibi dillerde otomatlar eklerin
+durum çeviricisi olması gerekmektedir.
+yakalanmasında kullanılabilir. Ancak bir kelimenin
+Burada ε epsilon yani boş karakteri temsil
+kökünün sondan tüketim ile elde edilmesinde yeterli
+etmektedir.
+değildir.
+Bu çevirici sadece yukarıdaki üç örnek için ne
+olmalıdır.
+==================================================
+
+--- SAYFA 16 ---
+Düzenli ifadeler
+AAAAA BBBB – içerisinde 5 kez A ve sonrasında
+da 4 kez B geçsin. Yakalanacak öbekler:
+Bu ifade de A sayısı n, B sayısı da m olsun.
+AAAAA BBB
+A{n}B{m} düzenli ifadesi
+AAA B
+sadece n ve m sabit ise doğru çıkarım yapabilir.
+AAB
+N ve m sayısı önceden bilinmiyorsa örneğin n > Yakalanmayacak öbekler
+m koşulu için çıkarım yapamaz.
+ABB
+Yandaki ifadeleri çıkarım yapabilecek bir düzenli
+AB
+ifade yok.
+AABB
+AAABB
+==================================================
+
+--- SAYFA 17 ---
+Öbek karmaşıklıkları –
+Chomsky Hiyerarşisi
+Dilleri ve yakalamak istediğimiz metin
+karmaşıklıklarını ifade ederken daha önce
+tanımlanmış olan Chomsky hiyerarşisiniz
+kullanıyoruz.
+Bu hiyerarşide öbek yada dil karmaşıklığı açılım
+yöntemi ile gösteriliyor.
+A -> c A
+S -> g S c
+Yukarıdaki örneklerde A yerine c A ve S yerine g S c
+yazılarak açılım daha da türetilebilir.
+==================================================
+
+--- SAYFA 18 ---
+Referanslar
+https://bilgisayarkavramlari.com/2009/06/27/chomsky-hiyerarsisi-chomsky-hierarchy/
+https://bilgisayarkavramlari.com/2007/04/14/regular-expression-regexp-duzenli-deyimler-
+ifadeler/
+https://web.cs.hacettepe.edu.tr/~ilyas/Courses/BBM401/lec03-
+RegularExpressionsRegularLanguages.pdf
+https://tr.wikipedia.org/wiki/D%C3%BCzenli_ifade
+==================================================
